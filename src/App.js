@@ -1,4 +1,5 @@
 import React from "react";
+import "./_app.scss";
 
 import { Container } from "react-bootstrap";
 
