@@ -5,10 +5,14 @@ import { FaBars } from "react-icons/fa";
 import { AiOutlineSearch } from "react-icons/ai";
 import { MdNotifications, MdApps } from "react-icons/md";
 
-function Header() {
+function Header({ handleToggleSidebar }) {
   return (
     <div className="header border border-dark">
-      <FaBars className="header__menu" size={26} />
+      <FaBars
+        className="header__menu"
+        size={26}
+        onClick={() => handleToggleSidebar()}
+      />
       <img
         src="https://pngimg.com/uploads/youtube/youtube_PNG2.png"
         alt="Youtube"
