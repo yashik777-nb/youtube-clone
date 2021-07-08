@@ -8,7 +8,7 @@ function Video() {
     <div className="video">
       <div className="video__top">
         <img
-          src="https://i.ytimg.com/an_webp/AcdZaXYh2f0/mqdefault_6s.webp?du=3000&sqp=CML2l4cG&rs=AOn4CLD34qh4llqGc96LBdjlLERsAzLtaA"
+          src="https://i.ytimg.com/vi/F6GIp8uj1fg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAlHS-8Av9KbAn2506ahZVM_sHxDg"
           alt=""
         ></img>
         <span>05.43sec</span>
