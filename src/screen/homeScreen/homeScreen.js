@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./_homeScreen.scss";
 
 import { Container, Row, Col } from "react-bootstrap";
@@ -6,14 +6,24 @@ import { Container, Row, Col } from "react-bootstrap";
 import CategoriesBar from "../../components/categoriesBar/CategoriesBar";
 import Video from "../../components/video/Video";
 
-function homeScreen() {
+import { useDispatch, useSelector } from "react-redux";
+import { getPopularVideos } from "../../redux/actions/videos.action";
+
+function HomeScreen() {
+  const dispatch = useDispatch();
+  const { videos } = useSelector((state) => state.homeVideos);
+
+  useEffect(() => {
+    dispatch(getPopularVideos());
+  }, [dispatch]);
+
   return (
     <Container>
       <CategoriesBar />
       <Row>
-        {[...new Array(20)].map((element, index) => (
-          <Col lg={3} md={4} key={index}>
-            <Video />
+        {[...videos].map((video) => (
+          <Col lg={3} md={4} key={video.id}>
+            <Video video={video} />
           </Col>
         ))}
       </Row>
@@ -21,4 +31,4 @@ function homeScreen() {
   );
 }
 
-export default homeScreen;
+export default HomeScreen;
